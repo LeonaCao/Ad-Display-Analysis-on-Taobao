@@ -125,7 +125,7 @@ df1 = sqldf("select
 ,	sum(price) 'campaign_cost'
 ,	count(clk) 'impressions'
 ,	sum(clk) 'clicks'
-,	sum(price)/count(clk) 'CPM'
+,	sum(price)*1000/count(clk) 'CPM'
 ,	sum(clk)/count(clk) 'CTR'
 from
 	df
